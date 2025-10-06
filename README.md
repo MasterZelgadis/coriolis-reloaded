@@ -1,2 +1,2 @@
 # coriolis-reloaded
-Adds the Coriolis Reloaded: Combat Overhaul mechanics and some QOL things to the Coriolis system
+Adds the Coriolis Reloaded: Combat Overhaul mechanics and some QOL things to the Coriolis system for FoundryVTT
