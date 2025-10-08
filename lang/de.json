@@ -1,0 +1,47 @@
+{
+  "CoriolisReloaded.stress": "Stress",
+  "CoriolisReloaded.StressRoll": {
+    "title": "Unterdrückung",
+    "selectModifier": "Modifikator auswählen",
+    "result_none": "Nichts passiert",
+    "result_1stress": "Das Ziel erleidet 1 Stress",
+    "result_suppressed": "Unterdrückt: Das Ziel erleidet 1 Stress und verliert die nächste schnelle Aktion",
+    "result_pinned": "Festgenagelt: Das Ziel erleidet 1 Stress und verliert die nächste langsame Aktion"
+  },
+  "CoriolisReloaded.Effect.activeEffects": "Aktive Zustände",
+  "CoriolisReloaded.Effect.panic": "Panik",
+  "CoriolisReloaded.Effect.panicRoll": "Panikdauer",
+  "CoriolisReloaded.PanicEffectApplied": "Panik ausgelöst – Dauer wird ermittelt (1d6 Runden)",
+  "CoriolisReloaded.Effect.panicApplied": "{name} gerät in Panik!",
+  "CoriolisReloaded.Effect.panicRecovered": "{name} beruhigt sich wieder.",
+  "CoriolisReloaded.Effect.panicDescription": "As you suffer stress, your MP is reduced. If something reduces your MP to zero, you panic. Your character may collapse into uncontrollable sobs or go catatonic. You may crawl but cannot perform any other actions or roll for any skills. After 1d6 rounds, you regain some control of yourself and recover 1 MP.",
+  "CoriolisReloaded.Effect.broken": "Gebrochen",
+  "CoriolisReloaded.Effect.brokenDescription": "Du bist gebrochen.",
+  "CoriolisReloaded.Effect.brokenApplied": "{name} ist gebrochen!",
+  "CoriolisReloaded.Effect.brokenRecovered": "{name} erholt sich wieder.",
+  "CoriolisReloaded.Effect.suppressed": "Unterdrückt",
+  "CoriolisReloaded.Effect.suppressedDescription": "Du bist unterdrückt. Erleide 1 Stress und verliere die nächste schnelle Aktion.",
+  "CoriolisReloaded.Effect.suppressedUiMessage": "{name} ist unterdrückt!",
+  "CoriolisReloaded.Effect.pinned": "Festgenagelt",
+  "CoriolisReloaded.Effect.pinnedDescription": "Du bist festgenagelt. Erleide 1 Stress und verliere die nächste langsame Aktion.",
+  "CoriolisReloaded.Effect.pinnedUiMessage": "{name} ist festgenagelt!",
+  "CoriolisReloaded.traitlinker.settings": {
+    "enabled.name": "Trait Linker aktiv",
+    "enabled.hint": "Verlinkt Waffenmerkmale automatisch mit einem gleichnamigen Journal-Eintrag",
+    "traitJournalUUID.name": "Journal",
+    "traitJournalUUID.hint": "UUID des Journals mit den Waffenmerkmalen"
+  },
+  "CoriolisReloaded.additionaleffects": {
+    "settings": {
+      "enabled.name": "Zusatzeffekte im Chat aktiv",
+      "enabled.hint": "Gibt die möglichen Effekte für Zusatzerfolge bei Angriffen mit im Chat aus",
+      "meleeJournal.uuid": "Nahkampf-Journal UUID",
+      "meleeJournal.hint": "UUID des Journals für die Zusatzeffekte im Nahkampf",
+      "rangedJournal.uuid": "Fernkampf-Journal UUID",
+      "rangedJournal.hint": "UUID des Journals für die Zusatzeffekte im Fernkampf",
+      "grenadeJournal.uuid": "Granaten-Journal UUID",
+      "grenadeJournal.hint": "UUID des Journals für die Zusatzeffekte für Granaten"
+    },
+    "chatInfo": "Bonuseffekte für zusätzliche Erfolge"
+  }
+}

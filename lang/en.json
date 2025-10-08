@@ -1,0 +1,47 @@
+{
+  "CoriolisReloaded.stress": "Stress",
+  "CoriolisReloaded.StressRoll": {
+    "title": "Suppression",
+    "selectModifier": "Select modifier",
+    "result_none": "Nothing happens",
+    "result_1stress": "The target suffers 1 stress",
+    "result_suppressed": "Suppressed: The target suffers 1 stress and loses its next fast action",
+    "result_pinned": "Pinned down: The target suffers 1 stress and loses its next slow action"
+  },
+  "CoriolisReloaded.Effect.activeEffects": "Active Effects",
+  "CoriolisReloaded.Effect.panic": "Panic",
+  "CoriolisReloaded.Effect.panicRoll": "Panic duration",
+  "CoriolisReloaded.PanicEffectApplied": "Panic triggered – Duration is rolled (1d6 turns)",
+  "CoriolisReloaded.Effect.panicApplied": "{name} is panicking!",
+  "CoriolisReloaded.Effect.panicRecovered": "{name} calms down.",
+  "CoriolisReloaded.Effect.panicDescription": "As you suffer stress, your MP is reduced. If something reduces your MP to zero, you panic. Your character may collapse into uncontrollable sobs or go catatonic. You may crawl but cannot perform any other actions or roll for any skills. After 1d6 rounds, you regain some control of yourself and recover 1 MP.",
+  "CoriolisReloaded.Effect.broken": "Broken",
+  "CoriolisReloaded.Effect.brokenDescription": "You are broken.",
+  "CoriolisReloaded.Effect.brokenApplied": "{name} is broken!",
+  "CoriolisReloaded.Effect.brokenRecovered": "{name} recovered.",
+  "CoriolisReloaded.Effect.suppressed": "Suppressed",
+  "CoriolisReloaded.Effect.suppressedDescription": "You are suppressed. Suffer 1 stress and lose your next fast action.",
+  "CoriolisReloaded.Effect.suppressedUiMessage": "${actor.name} is suppressed!",
+  "CoriolisReloaded.Effect.pinned": "Pinnedd",
+  "CoriolisReloaded.Effect.pinnedDescription": "You are pinned. Suffer 1 stress and lose your next slow action.",
+  "CoriolisReloaded.Effect.pinnedUiMessage": "{name} is pinned!",
+  "CoriolisReloaded.traitlinker.settings": {
+    "enabled.name": "Trait Linker active",
+    "enabled.hint": "Links weapon traits to journal pages of the same name",
+    "traitJournalUUID.name": "Journal",
+    "traitJournalUUID.hint": "UUID of the journal containing the weapon traits"
+  },
+  "CoriolisReloaded.additionaleffects": {
+    "settings": {
+      "enabled.name": "Additional effects in Chat active",
+      "enabled.hint": "Attaches the selectable bonus effects from additional successes on attack rolls",
+      "meleeJournal.uuid": "Melee effect journal UUID",
+      "meleeJournal.hint": "UUID of the journal page with the bonus effects for melee combat",
+      "rangedJournal.uuid": "Ranged effect journal UUID",
+      "rangedJournal.hint": "UUID of the journal page with the bonus effects for ranged combat",
+      "grenadeJournal.uuid": "Grenade effect journal UUID",
+      "grenadeJournal.hint": "UUID of the journal page with the bonus effects for grenades"
+    },
+    "chatInfo": "Bonus effects for additional successes"
+  }
+}

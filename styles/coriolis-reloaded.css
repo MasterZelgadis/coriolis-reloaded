@@ -1,0 +1,86 @@
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar {
+  padding: 0px 5px 0px 5px;
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+  background-color: rgba(113, 130, 190, 0.35);
+  height: 27px;
+  justify-content: space-between;
+  align-items: center;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-rounded {
+  border-radius: 2px;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-pill {
+  border-radius: 40px;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment {
+  box-sizing: border-box;
+  flex: 1 1 10px;
+  height: 17px;
+  margin: 3.5px 1px;
+  background-color: #000000;
+  transition: background-color 275ms ease, border 275ms ease;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.on {
+  background-color: #cc3333;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.on:hover {
+  transform: scale(1.05);
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.off {
+  background-color: #000000;
+}
+.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.off:hover {
+  transform: scale(1.05);
+}
+.yzecoriolis.sheet.actor .stress-label:hover {
+  transform: scale(1.05);
+}
+.stress-bar .bar-segment.hover-to-increase {
+  border: 1px solid #cc3333;
+}
+.stress-bar .bar-segment.hover-to-decrease {
+  background-color: #4d1414 !important;
+}
+.yzecoriolis.sheet.actor .sheet-body .active-effects-list {
+  list-style: none;
+  overflow-y: auto;
+  max-height: 146px;
+  height: 146px;
+  padding: 0px;
+  align-items: center;
+  margin: 0 10px;
+}
+.yzecoriolis.sheet.actor .sheet-body .active-effects-list .effects-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 3px;
+  background-color: rgba(113, 130, 190, 0.44);
+  margin-bottom: 5px;
+  height: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.yzecoriolis.sheet.actor .sheet-body .active-effects-list .effects-header h4 {
+  font-family: "Cairo";
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.yzecoriolis.sheet.actor .sheet-body .active-effects-list .effects-effect {
+  font-family: "Cairo-SemiBold";
+  color: white;
+  color: #ffa903;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 275ms ease;
+}
+.effect-description-row {
+  border-left: 2px solid #666;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+  color: #ccc;
+  font-style: italic;
+}
