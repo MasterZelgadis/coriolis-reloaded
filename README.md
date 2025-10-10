@@ -26,6 +26,11 @@ In case of the Panic effect (mind points reduced to 0) the panic duration is als
 
 <img width="335" height="152" alt="image" src="https://github.com/user-attachments/assets/37c692a3-c63f-4b1c-86c2-e8a01f59643a" />
 
+You can use custom icons for the status effects created by this module using the game settings. Just paste the path to the icon you want to use into the respective field.
+
+<img width="788" height="687" alt="image" src="https://github.com/user-attachments/assets/4e1ffae7-981c-4e96-8867-a00e89e952e6" />
+
+
 ## Bonus effects from additional successes
 
 When attacking with a weapon, you basically need only one success to hit and deal damage. In Coriolis Reloaded, you can spend additional successes for various effects, like extra damage.
