@@ -145,7 +145,7 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 	const actor = app.actor;
 	if (!["character", "npc"].includes(actor?.type)) return;
 
-	// === STRESS-BALKEN ===
+	// === STRESS-BAR ===
 	const stress = foundry.utils.getProperty(actor.system, "custom.stress") ?? 0;
 	const stressMax = 10;
 
@@ -174,7 +174,7 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 		statList.append($(stressHTML));
 	}
 
-	// === AKTIVE EFFEKTE ANZEIGEN ===
+	// === SHOW ACTIVE EFFECTS ===
 	const effects = actor.effects.filter(e => !e.disabled);
 	let effectListHTML = `<ul class="active-effects-list"><li class="effects-header"><h4>${game.i18n.localize("CoriolisReloaded.Effect.activeEffects")}</h4></li>`;
 
@@ -201,7 +201,7 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 	if (woundsElement.length) {
 		woundsElement.after(effectListHTML);
 
-		// Rechtsklick auf einen Effekt zum Löschen
+		// Right click the effect to delete
 		html.find(".active-effects-list .effects-effect[data-effect-id]").on("contextmenu", async (event) => {
 			event.preventDefault();
 			const effectId = event.currentTarget.dataset.effectId;
@@ -210,7 +210,7 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 			try {
 				await actor.deleteEmbeddedDocuments("ActiveEffect", [effectId]);
 				ui.notifications.info(`Effekt wurde entfernt.`);
-				// Sheet neu rendern, damit die Änderung sichtbar wird
+				// Re-render sheet to show the changes
 				app.render();
 			} catch (err) {
 				console.error("Failed to delete effect", err);
@@ -219,16 +219,16 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 		});
 	}
 
-	// Event-Listener: Effektbeschreibung bei Klick ausklappen
+	// Event-Listener: Show effect description
 	html.find(".effects-effect").on("click", function () {
 		const effectId = $(this).data("effect-id");
 		const descriptionRow = html.find(`.effect-description-row[data-effect-id="${effectId}"]`);
 		descriptionRow.slideToggle(150);
 	});
 
-	// === EVENT-LISTENER FÜR STRESS-BALKEN ===
 
-	// Klick auf Stress-Balkensegmente zum Ändern des Werts
+	// === EVENT-LISTENER FOR STRESS-BAR ===
+	// Click on bar segments to change the value
 	html.find('.bar-segment[data-name="system.custom.stress"]').on("click", async function (event) {
 		event.preventDefault();
 
@@ -250,14 +250,14 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 		}
 	});
 
-	// Klick auf den Würfel-Button (Stress-Wurf)
+	// Click event for the ddice button (suppression)
 	html.find("#stress-label").on("click", async () => {
 	    const stressValue = foundry.utils.getProperty(actor.system, "custom.stress") ?? 0;
 
-	    // Array mit Modifikatoren
+	    // Array with modifiers
 	    const modifiers = [-4, -3, -2, -1, 0, 1, 2, 3, 4];
 
-	    // Buttons dynamisch erstellen
+	    // Create buttons
 	    const buttons = {};
 	    for (let mod of modifiers) {
 	        const label = mod > 0 ? `+${mod}` : `${mod}`;
@@ -267,7 +267,6 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 	        };
 	    }
 
-	    // Dialog anzeigen
 	    new Dialog({
 	        title: game.i18n.localize("CoriolisReloaded.StressRoll.title"),
 	        content: `<p>${game.i18n.localize("CoriolisReloaded.StressRoll.selectModifier")}</p>`,
@@ -276,7 +275,7 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 	    }).render(true);
 	});
 
-	// Hover-Effekt auf Stress-Balkensegmente
+	// Hover-Effect for stress bar elements
 	html.find('.stress-bar .bar-segment').hover(
 		function () {
 			const hoveredIndex = Number(this.dataset.index);
@@ -326,7 +325,7 @@ Hooks.on("updateActor", async (actor, updates, options, userId) => {
 			// Whisper result to active GMs
 			const gmUsers = game.users.filter(u => u.isGM && u.active);
 			await ChatMessage.create({
-				content: `<h3>${game.i18n.localize("CoriolisReloaded.Effect.panicRoll")}</h3><p>Dauer: <strong>${roll.total}</strong> Runde(n)</p>`,
+				content: `<h3>${game.i18n.localize("CoriolisReloaded.Effect.panicRoll")}</h3><p>${game.i18n.localize("CoriolisReloaded.Effect.panicDuration")} <strong>${roll.total}</strong> ${game.i18n.localize("CoriolisReloaded.Effect.panicUnit")}</p>`,
 				speaker: ChatMessage.getSpeaker({ actor }),
 				whisper: gmUsers.map(u => u.id),
 				blind: false
