@@ -1,4 +1,14 @@
 {
+  "CoriolisReloaded.settings": {
+    "brokenicon.name": "Icon Gebrochen",
+    "brokenicon.hint": "Icon für Zustand Gebrochen",
+    "panicicon.name": "Icon Panik",
+    "panicicon.hint": "Icon für Zustand Panik",
+    "suppressedicon.name": "Icon Unterdrückt",
+    "auppressedicon.hint": "Icon für Zustand Unterdrückt",
+    "pinnedicon.name": "Icon Festgenagelt",
+    "pinnedicon.hint": "Icon für Zustand Festgenagelt"
+  },
   "CoriolisReloaded.stress": "Stress",
   "CoriolisReloaded.StressRoll": {
     "title": "Unterdrückung",

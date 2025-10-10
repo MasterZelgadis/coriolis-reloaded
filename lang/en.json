@@ -1,4 +1,14 @@
 {
+  "CoriolisReloaded.settings": {
+    "brokenicon.name": "Icon Broken",
+    "brokenicon.hint": "Icon for status Broken",
+    "panicicon.name": "Icon Panic",
+    "panicicon.hint": "Icon for status Panic",
+    "suppressedicon.name": "Icon Suppressed",
+    "auppressedicon.hint": "Icon for status Suppressed",
+    "pinnedicon.name": "Icon Pinned",
+    "pinnedicon.hint": "Icon for status Pinned"
+  },
   "CoriolisReloaded.stress": "Stress",
   "CoriolisReloaded.StressRoll": {
     "title": "Suppression",
@@ -24,7 +34,7 @@
   "CoriolisReloaded.Effect.suppressed": "Suppressed",
   "CoriolisReloaded.Effect.suppressedDescription": "You are suppressed. Suffer 1 stress and lose your next fast action.",
   "CoriolisReloaded.Effect.suppressedUiMessage": "${actor.name} is suppressed!",
-  "CoriolisReloaded.Effect.pinned": "Pinnedd",
+  "CoriolisReloaded.Effect.pinned": "Pinned",
   "CoriolisReloaded.Effect.pinnedDescription": "You are pinned. Suffer 1 stress and lose your next slow action.",
   "CoriolisReloaded.Effect.pinnedUiMessage": "{name} is pinned!",
   "CoriolisReloaded.traitlinker.settings": {
