@@ -1,3 +1,47 @@
+const MODULE_ID = "coriolis-reloaded";
+
+Hooks.once("init", () => {
+  // Setting: Icon for broken status effect
+  game.settings.register(MODULE_ID, "brokenicon", {
+    name: game.i18n.localize(`CoriolisReloaded.settings.brokenicon.name`),
+    hint: game.i18n.localize(`CoriolisReloaded.settings.brokenicon.hint`),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "icons/svg/cancel.svg"
+  });
+
+  // Setting: Icon for panic status effect
+  game.settings.register(MODULE_ID, "panicicon", {
+    name: game.i18n.localize(`CoriolisReloaded.settings.panicicon.name`),
+    hint: game.i18n.localize(`CoriolisReloaded.settings.panicicon.hint`),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "icons/svg/terror.svg"
+  });
+
+  // Setting: Icon for suppressed status effect
+  game.settings.register(MODULE_ID, "suppressedicon", {
+    name: game.i18n.localize(`CoriolisReloaded.settings.suppressedicon.name`),
+    hint: game.i18n.localize(`CoriolisReloaded.settings.suppressedicon.hint`),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "icons/svg/explosion.svg"
+  });
+
+  // Setting: Icon for pinned status effect
+  game.settings.register(MODULE_ID, "pinnedicon", {
+    name: game.i18n.localize(`CoriolisReloaded.settings.pinnedicon.name`),
+    hint: game.i18n.localize(`CoriolisReloaded.settings.pinnedicon.hint`),
+    scope: "world",
+    config: true,
+    type: String,
+    default: "icons/svg/direction.svg"
+  });
+});
+
 function getTextEditor() {
     return foundry.applications.ux.TextEditor.implementation;
 }
@@ -6,7 +50,7 @@ function createPanicEffect(actor, duration) {
 	const effectData = {
 		name: game.i18n.localize("CoriolisReloaded.Effect.panic"),
 		label: game.i18n.localize("CoriolisReloaded.Effect.panic"),
-		img: "modules/coriolis-reloaded/icons/panic.png",
+		img: game.settings.get(MODULE_ID, "panicicon"),
 		origin: actor.uuid,
 		disabled: false,
 		duration: {
@@ -31,7 +75,7 @@ function createBrokenEffect(actor) {
 	const effectData = {
 		name: game.i18n.localize("CoriolisReloaded.Effect.broken"),
 		label: game.i18n.localize("CoriolisReloaded.Effect.broken"),
-		img: "modules/coriolis-reloaded/icons/broken.png",
+		img: game.settings.get(MODULE_ID, "brokenicon"),
 		origin: actor.uuid,
 		disabled: false,
 		duration: {
@@ -56,7 +100,7 @@ function createSuppressedEffect(actor) {
   const effectData = {
     name: game.i18n.localize("CoriolisReloaded.Effect.suppressed"),
     label: game.i18n.localize("CoriolisReloaded.Effect.suppressed"),
-    img: "modules/coriolis-reloaded/icons/suppressed.png",
+    img: game.settings.get(MODULE_ID, "suppressedicon"),
     origin: actor.uuid,
     disabled: false,
     duration: {
@@ -82,7 +126,7 @@ function createPinnedEffect(actor) {
   const effectData = {
     name: game.i18n.localize("CoriolisReloaded.Effect.pinned"),
     label: game.i18n.localize("CoriolisReloaded.Effect.pinned"),
-    img: "modules/coriolis-reloaded/icons/pinned.png",
+    img: game.settings.get(MODULE_ID, "pinnedicon"),
     origin: actor.uuid,
     disabled: false,
     duration: {
@@ -120,7 +164,6 @@ async function rollStress(actor, stressValue, modifier) {
         if (!hasSuppressed) {
             const suppressedEffect = createSuppressedEffect(actor);
             await actor.createEmbeddedDocuments("ActiveEffect", [suppressedEffect]);
-            ui.notifications.info(game.i18n.format("CoriolisReloaded.Effect.suppressedUiMessage", { name: actor.name }));
         }
     } else if (total >= 9) {
         flavorText = game.i18n.localize("CoriolisReloaded.StressRoll.result_pinned");
@@ -128,7 +171,6 @@ async function rollStress(actor, stressValue, modifier) {
         if (!hasPinned) {
             const pinnedEffect = createPinnedEffect(actor);
             await actor.createEmbeddedDocuments("ActiveEffect", [pinnedEffect]);
-            ui.notifications.info(game.i18n.format("CoriolisReloaded.Effect.pinnedUiMessage", { name: actor.name }));
         }
     }
 
@@ -140,6 +182,8 @@ async function rollStress(actor, stressValue, modifier) {
         flavor: content
     });
 }
+
+
 
 Hooks.on("renderActorSheet", async (app, html, data) => {
 	const actor = app.actor;
@@ -209,7 +253,6 @@ Hooks.on("renderActorSheet", async (app, html, data) => {
 
 			try {
 				await actor.deleteEmbeddedDocuments("ActiveEffect", [effectId]);
-				ui.notifications.info(`Effekt wurde entfernt.`);
 				// Re-render sheet to show the changes
 				app.render();
 			} catch (err) {
