@@ -11,6 +11,8 @@
   "CoriolisReloaded.Effect.activeEffects": "Active Effects",
   "CoriolisReloaded.Effect.panic": "Panic",
   "CoriolisReloaded.Effect.panicRoll": "Panic duration",
+  "CoriolisReloaded.Effect.panicDuration": "Duration",
+  "CoriolisReloaded.Effect.panicUnit": "round(s)",
   "CoriolisReloaded.PanicEffectApplied": "Panic triggered – Duration is rolled (1d6 turns)",
   "CoriolisReloaded.Effect.panicApplied": "{name} is panicking!",
   "CoriolisReloaded.Effect.panicRecovered": "{name} calms down.",
