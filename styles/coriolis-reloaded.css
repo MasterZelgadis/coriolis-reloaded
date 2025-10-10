@@ -1,4 +1,4 @@
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar {
+.yzecoriolis.sheet.actor .stress-bar {
   padding: 0px 5px 0px 5px;
   border: 1px solid #a4a4a4;
   border-radius: 5px;
@@ -7,13 +7,13 @@
   justify-content: space-between;
   align-items: center;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-rounded {
+.yzecoriolis.sheet.actor .stress-bar .bar-rounded {
   border-radius: 2px;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-pill {
+.yzecoriolis.sheet.actor .stress-bar .bar-pill {
   border-radius: 40px;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment {
+.yzecoriolis.sheet.actor .stress-bar .bar-segment {
   box-sizing: border-box;
   flex: 1 1 10px;
   height: 17px;
@@ -21,16 +21,16 @@
   background-color: #000000;
   transition: background-color 275ms ease, border 275ms ease;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.on {
+.yzecoriolis.sheet.actor .stress-bar .bar-segment.on {
   background-color: #cc3333;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.on:hover {
+.yzecoriolis.sheet.actor .stress-bar .bar-segment.on:hover {
   transform: scale(1.05);
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.off {
+.yzecoriolis.sheet.actor .stress-bar .bar-segment.off {
   background-color: #000000;
 }
-.yzecoriolis.sheet.actor .always-visible-stats .perma-stats-list .entry .stress-bar .bar-segment.off:hover {
+.yzecoriolis.sheet.actor stress-bar .bar-segment.off:hover {
   transform: scale(1.05);
 }
 .yzecoriolis.sheet.actor .stress-label:hover {
