@@ -1,3 +1,8 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/MasterZelgadis/coriolis-reloaded?style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/downloads/MasterZelgadis/coriolis-reloaded/latest/module.zip?style=for-the-badge)
+
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https://github.com/MasterZelgadis/coriolis-reloaded/releases/latest/download/module.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=green&style=for-the-badge)
+
 # Coriolis Reloaded - The Combat Overhaul
 
 This module extends the yzecoriolis System with the stress deature of the Coriolis Reloaded combat rules. It also adds a few other QOL features, that are listed below.
