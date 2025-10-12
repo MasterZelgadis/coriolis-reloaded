@@ -29,9 +29,10 @@
   "styles": ["styles/coriolis-reloaded.css"],
   "compatibility": {
     "minimum": "13",
-    "verified": "13"
+    "verified": "13.350"
   },
   "systems": ["yze-coriolis"],
   "manifest": "https://example.com/coriolis-stress/module.json",
   "download": "https://example.com/coriolis-stress/module.zip"
 }
+
