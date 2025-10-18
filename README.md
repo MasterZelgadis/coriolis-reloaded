@@ -1,5 +1,6 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/MasterZelgadis/coriolis-reloaded?style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/downloads/MasterZelgadis/coriolis-reloaded/latest/module.zip?style=for-the-badge)
+![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https://forge-vtt.com/api/bazaar/package/coriolis-reloaded&colorB=green&style=for-the-badge)
 
 ![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https://github.com/MasterZelgadis/coriolis-reloaded/releases/latest/download/module.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=green&style=for-the-badge)
 
