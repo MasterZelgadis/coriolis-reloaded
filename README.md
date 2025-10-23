@@ -79,6 +79,10 @@ Add the traits to the weapon normally, by just typing them into the respective f
 
 Traits that don't have a page in that journal don't get linked and are just displayed as before.
 
+In the character sheet the provided trait descriptions are displayed as a tooltip on the specific trait.
+<img width="634" height="294" alt="image" src="https://github.com/user-attachments/assets/f70b4580-3c8c-49c2-a3a7-33376137a40b" />
+
+
 Note that each page in the journal has to be named exactly like the weapon trait in order to be linked, with the exception of traits with a value. Here you just add a page named like the trait without the value.
 So for the trait "Armor Penetration 1" you name the page "Armor Penetration".
 
