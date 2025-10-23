@@ -1,5 +1,8 @@
 const MODULE_ID = "coriolis-reloaded";
 
+let traitJournalCache = null;
+let traitCandidatesCache = null;
+
 Hooks.once("init", () => {
   // Setting: Activate/Deactivate module
   game.settings.register(MODULE_ID, "traitlinkerenabled", {
@@ -22,41 +25,105 @@ Hooks.once("init", () => {
   });
 });
 
+// --- CHAT MESSAGE LINKING ---
 Hooks.on("preCreateChatMessage", async (message) => {
-  try {
-    if (!game.settings.get(MODULE_ID, "traitlinkerenabled")) return;
-    if (message.title != "weapon") return;
-    let content = message.content;
-    if (!content) return;
+  if (!game.settings.get(MODULE_ID, "traitlinkerenabled")) return;
+  if (message.title !== "weapon") return;
+  let content = message.content;
+  if (!content) return;
 
-    const journalUuid = game.settings.get(MODULE_ID, "traitJournalUuid");
-    if (!journalUuid) return;
+  const candidates = await getTraitCandidates();
+  for (const { name, uuid, regex } of candidates) {
+    content = content.replace(regex, (_, baseName, value) => {
+      const display = baseName + (value || "");
+      return `@UUID[${uuid}]{${display}}`;
+    });
+  }
 
-    const journal = await fromUuid(journalUuid);
-    if (!journal) {
-      console.warn("Journal not found for UUID:", journalUuid);
-      return;
-    }
+  message.updateSource({ content });
+});
 
-    const candidates = journal.pages.contents.map(page => ({
-      name: page.name,
-      uuid: page.uuid
-    }));
+// --- CHARACTER SHEET TOOLTIP ---
+Hooks.on("renderActorSheet", async (app, html, data) => {
+  if (!game.settings.get(MODULE_ID, "traitlinkerenabled")) return;
 
-    for (const { name, uuid } of candidates) {
-      // Trait name in the beginning of the string + number in the end
-      const regex = new RegExp(`\\b(${escapeRegExp(name)})(\\s\\d+)?\\b`, "g");
-      content = content.replace(regex, (_, baseName, value) => {
+  const candidates = await getTraitCandidates();
+  const traitElements = html.find(".item-properties");
+  if (!traitElements.length) return;
+
+  for (const el of traitElements) {
+    let text = el.innerHTML;
+    for (const { name, content, regex } of candidates) {
+      text = text.replace(regex, (_, baseName, value) => {
         const display = baseName + (value || "");
-        return `@UUID[${uuid}]{${display}}`;
+        return `<span class="trait-tooltip" data-html="${encodeURIComponent(content)}">${display}</span>`;
       });
     }
-
-    message.updateSource({ content });
-  } catch (err) {
-    console.error("Error linking the trait", err);
+    el.innerHTML = text;
   }
+
+  // --- TOOLTIP EVENTS ---
+  html.find(".trait-tooltip").hover(
+  function (event) {
+    const content = decodeURIComponent($(this).attr("data-html"));
+    let tooltip = $(".custom-tooltip");
+    if (!tooltip.length) {
+      tooltip = $('<div class="custom-tooltip"></div>').appendTo("body");
+    }
+    tooltip.empty().append($(content));
+
+    // Calculate Tooltip-Position
+    const offset = $(this).offset();
+    const tooltipWidth = tooltip.outerWidth();
+    const tooltipHeight = tooltip.outerHeight();
+    const windowWidth = $(window).width();
+    const windowHeight = $(window).height();
+
+    let top = offset.top + $(this).outerHeight() + 5;
+    let left = offset.left;
+
+    if (left + tooltipWidth > windowWidth - 20) {
+      left = windowWidth - tooltipWidth - 20;
+    }
+    if (top + tooltipHeight > windowHeight - 20) {
+      top = offset.top - tooltipHeight - 5;
+    }
+
+    tooltip.css({ top, left, display: "block", opacity: 1 });
+  },
+  function () {
+    $(".custom-tooltip").css({ display: "none", opacity: 0 });
+  }
+);
 });
+
+// --- HELPERS ---
+async function getTraitJournal() {
+  if (traitJournalCache) return traitJournalCache;
+  const uuid = game.settings.get(MODULE_ID, "traitJournalUuid");
+  if (!uuid) return null;
+  const journal = await fromUuid(uuid);
+  if (!journal) {
+    console.warn("Trait Journal not found for UUID:", uuid);
+    return null;
+  }
+  traitJournalCache = journal;
+  return journal;
+}
+
+async function getTraitCandidates() {
+  const journalUuid = game.settings.get(MODULE_ID, "traitJournalUuid");
+  if (!journalUuid) return [];
+  const journal = await fromUuid(journalUuid);
+  if (!journal) return [];
+
+  return journal.pages.contents.map(page => ({
+    name: page.name,
+    uuid: page.uuid,
+    content: page.text?.content || "",
+    regex: new RegExp(`\\b(${escapeRegExp(page.name)})(\\s\\d+)?\\b`, "g")
+  }));
+}
 
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
