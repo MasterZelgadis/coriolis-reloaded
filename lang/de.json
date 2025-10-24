@@ -40,8 +40,10 @@
   "CoriolisReloaded.traitlinker.settings": {
     "enabled.name": "Trait Linker aktiv",
     "enabled.hint": "Verlinkt Waffenmerkmale automatisch mit einem gleichnamigen Journal-Eintrag",
-    "traitJournalUUID.name": "Journal",
-    "traitJournalUUID.hint": "UUID des Journals mit den Waffenmerkmalen"
+    "traitJournalUUID.name": "Journal (Waffenmerkmale)",
+    "traitJournalUUID.hint": "UUID des Journals mit den Waffenmerkmalen",
+    "traitJournalUUIDArmors.name": "Journal (Panzerungsmerkmale)",
+    "traitJournalUUIDArmors.hint": "UUID des Journals mit den Panzerungsmerkmalen"
   },
   "CoriolisReloaded.additionaleffects": {
     "settings": {
