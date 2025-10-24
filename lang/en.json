@@ -40,8 +40,10 @@
   "CoriolisReloaded.traitlinker.settings": {
     "enabled.name": "Trait Linker active",
     "enabled.hint": "Links weapon traits to journal pages of the same name",
-    "traitJournalUUID.name": "Journal",
-    "traitJournalUUID.hint": "UUID of the journal containing the weapon traits"
+    "traitJournalUUID.name": "Journal (Weapon traits)",
+    "traitJournalUUID.hint": "UUID of the journal containing the weapon traits",
+    "traitJournalUUIDArmors.name": "Journal (Armor traits)",
+    "traitJournalUUIDArmors.hint": "UUID of the journal containing the armor traits"
   },
   "CoriolisReloaded.additionaleffects": {
     "settings": {
