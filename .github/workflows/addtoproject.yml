@@ -3,7 +3,7 @@ name: Add issues to dev project
 on:
   issues:
     types:
-      - opened
+      - labeled
 
 jobs:
   add-to-project:
@@ -17,4 +17,3 @@ jobs:
           project-url: https://github.com/users/MasterZelgadis/projects/1
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: needs-triage
-          label-operator: OR
