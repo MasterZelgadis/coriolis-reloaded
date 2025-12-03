@@ -5,7 +5,7 @@
     "panicicon.name": "Icon Panik",
     "panicicon.hint": "Icon für Zustand Panik",
     "suppressedicon.name": "Icon Unterdrückt",
-    "auppressedicon.hint": "Icon für Zustand Unterdrückt",
+    "suppressedicon.hint": "Icon für Zustand Unterdrückt",
     "pinnedicon.name": "Icon Festgenagelt",
     "pinnedicon.hint": "Icon für Zustand Festgenagelt"
   },

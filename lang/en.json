@@ -5,7 +5,7 @@
     "panicicon.name": "Icon Panic",
     "panicicon.hint": "Icon for status Panic",
     "suppressedicon.name": "Icon Suppressed",
-    "auppressedicon.hint": "Icon for status Suppressed",
+    "suppressedicon.hint": "Icon for status Suppressed",
     "pinnedicon.name": "Icon Pinned",
     "pinnedicon.hint": "Icon for status Pinned"
   },
