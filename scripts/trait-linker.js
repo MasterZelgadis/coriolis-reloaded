@@ -36,18 +36,21 @@ Hooks.once("init", () => {
 Hooks.on("preCreateChatMessage", async (message) => {
   if (!game.settings.get(MODULE_ID, "traitlinkerenabled")) return;
   if (message.title !== "weapon") return;
+
   let content = message.content;
   if (!content) return;
+  const candidates = await getTraitCandidates("traitJournalUuid");
 
-  const candidates = await getTraitCandidates();
-  for (const { name, uuid, regex } of candidates) {
+  for (const { uuid, regex } of candidates) {
     content = content.replace(regex, (_, baseName, value) => {
       const display = baseName + (value || "");
       return `@UUID[${uuid}]{${display}}`;
     });
   }
+
   message.updateSource({ content });
 });
+
 
 // --- CHARACTER SHEET TOOLTIP ---
 Hooks.on("renderActorSheet", async (app, html, data) => {
