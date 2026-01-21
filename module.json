@@ -1,38 +1,42 @@
 {
-  "id": "coriolis-reloaded",
-  "name": "coriolis-reloaded",
-  "title": "Coriolis Reloaded: Combat Overhaul",
-  "description": "Adds the Coriolis Reloaded: Combat Overhaul mechanics and some QOL things to the Coriolis system",
-  "version": "1.0.0",
-  "authors": [
-    {
-      "name": "Stefan Guder"
-    }
-  ],
-  "esmodules": [
-    "scripts/stress.js",
-    "scripts/trait-linker.js",
-    "scripts/additional-effects.js"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
+    "id": "coriolis-reloaded",
+    "name": "coriolis-reloaded",
+    "title": "Coriolis Reloaded: Combat Overhaul",
+    "description": "Adds the Coriolis Reloaded: Combat Overhaul mechanics and some QOL things to the Coriolis system",
+    "version": "v1.2.0",
+    "authors": [
+        {
+            "name": "Stefan Guder"
+        }
+    ],
+    "esmodules": [
+        "scripts/stress.js",
+        "scripts/trait-linker.js",
+        "scripts/additional-effects.js",
+        "scripts/blastdamage.js"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json"
+        }
+    ],
+    "styles": [
+        "styles/coriolis-reloaded.css"
+    ],
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13.350"
     },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json"
-    }
-  ],
-  "styles": ["styles/coriolis-reloaded.css"],
-  "compatibility": {
-    "minimum": "13",
-    "verified": "13.350"
-  },
-  "systems": ["yze-coriolis"],
-  "manifest": "https://example.com/coriolis-stress/module.json",
-  "download": "https://example.com/coriolis-stress/module.zip"
+    "systems": [
+        "yze-coriolis"
+    ],
+    "manifest": "https://github.com/MasterZelgadis/coriolis-reloaded/releases/latest/download/module.json",
+    "download": "https://github.com/MasterZelgadis/coriolis-reloaded/releases/download/v1.2.0/module.zip"
 }
-

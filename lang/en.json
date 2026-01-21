@@ -57,5 +57,11 @@
       "grenadeJournal.hint": "UUID of the journal page with the bonus effects for grenades"
     },
     "chatInfo": "Bonus effects for additional successes"
+  },
+  "CoriolisReloaded.blastDamage": {
+    "settings": {
+      "enabled.name": "Blast damage addon active",
+      "enabled.hint": "Changes the blast damage of explosives to a button"
+    }
   }
 }
