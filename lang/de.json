@@ -58,10 +58,4 @@
     },
     "chatInfo": "Bonuseffekte für zusätzliche Erfolge"
   },
-  "CoriolisReloaded.blastDamage": {
-    "settings": {
-      "enabled.name": "Explosionsschaden-Addon aktiv",
-      "enabled.hint": "Ändert den Explosionsschaden von Sprengstoffen in einen Button"
-    }
-  }
 }
