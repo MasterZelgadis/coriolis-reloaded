@@ -57,5 +57,6 @@
       "grenadeJournal.hint": "UUID des Journals für die Zusatzeffekte für Granaten"
     },
     "chatInfo": "Bonuseffekte für zusätzliche Erfolge"
-  },
+  }
 }
+
