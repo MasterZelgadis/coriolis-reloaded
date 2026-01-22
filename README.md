@@ -4,12 +4,6 @@
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https://forge-vtt.com/api/bazaar/package/coriolis-reloaded&colorB=green&style=for-the-badge)
   
 ![GitHub release (latest)](https://img.shields.io/github/downloads/MasterZelgadis/coriolis-reloaded/latest/module.zip?style=for-the-badge)
-<details>
-  <summary>Download History</summary>
-
-  ![GitHub release (1.0.1)](https://img.shields.io/github/downloads/MasterZelgadis/coriolis-reloaded/v1.0.1/module.zip?style=for-the-badge)
-  ![GitHub release (1.1.0)](https://img.shields.io/github/downloads/MasterZelgadis/coriolis-reloaded/v1.1.0/module.zip?style=for-the-badge)
-</details>
 
 # Coriolis Reloaded - The Combat Overhaul
 
