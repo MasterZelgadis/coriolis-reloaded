@@ -1,0 +1,230 @@
+<form>
+  
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.general"}}</h1></p>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.enabled.name"}}</label>
+      <input type="checkbox" name="criticalconditionenabled" {{checked criticalconditionenabled}}>
+      <p class="notes">{{localize "CoriolisReloaded.criticalcondition.settings.enabled.hint"}}</p>
+    </div>
+  </div>
+
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.damagekeywords"}}</h1></p>
+    <p class="notes">{{localize "CoriolisReloaded.criticalcondition.settings.keywordhint"}}</p></br>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.explosiondamage"}}</label>
+      <input
+        type="text"
+        name="nameExplosion"
+        value="{{nameExplosion}}"
+        placeholder=""
+      />
+    </div>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.impactdamage"}}</label>
+      <input
+        type="text"
+        name="nameImpact"
+        value="{{nameImpact}}"
+        placeholder=""
+      />
+    </div>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.thermaldamage"}}</label>
+      <input
+        type="text"
+        name="nameThermal"
+        value="{{nameThermal}}"
+        placeholder=""
+      />
+    </div>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.rendingdamage"}}</label>
+      <input
+        type="text"
+        name="nameRending"
+        value="{{nameRending}}"
+        placeholder=""
+      />
+    </div>
+  </div>
+
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.tablesfor"}} {{localize "CoriolisReloaded.criticalcondition.settings.explosiondamage"}}</h1></p>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.body"}}</label>
+      <input
+        type="text"
+        name="tableIDexploBody"
+        value="{{tableIDexploBody}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.head"}}</label>
+      <input
+        type="text"
+        name="tableIDexploHead"
+        value="{{tableIDexploHead}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.arms"}}</label>
+      <input
+        type="text"
+        name="tableIDexploArms"
+        value="{{tableIDexploArms}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.legs"}}</label>
+      <input
+        type="text"
+        name="tableIDexploLegs"
+        value="{{tableIDexploLegs}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+  </div>
+
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.tablesfor"}} {{localize "CoriolisReloaded.criticalcondition.settings.impactdamage"}}</h1></p>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.body"}}</label>
+      <input
+        type="text"
+        name="tableIDImpBody"
+        value="{{tableIDImpBody}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.head"}}</label>
+      <input
+        type="text"
+        name="tableIDImpHead"
+        value="{{tableIDImpHead}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.arms"}}</label>
+      <input
+        type="text"
+        name="tableIDImpArms"
+        value="{{tableIDImpArms}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.legs"}}</label>
+      <input
+        type="text"
+        name="tableIDImpLegs"
+        value="{{tableIDImpLegs}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+  </div>
+
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.tablesfor"}} {{localize "CoriolisReloaded.criticalcondition.settings.thermaldamage"}}</h1></p>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.body"}}</label>
+      <input
+        type="text"
+        name="tableIDThermBody"
+        value="{{tableIDThermBody}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.head"}}</label>
+      <input
+        type="text"
+        name="tableIDThermHead"
+        value="{{tableIDThermHead}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.arms"}}</label>
+      <input
+        type="text"
+        name="tableIDThermArms"
+        value="{{tableIDThermArms}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.legs"}}</label>
+      <input
+        type="text"
+        name="tableIDThermLegs"
+        value="{{tableIDThermLegs}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+  </div>
+
+  <div>
+    <p><h1>{{localize "CoriolisReloaded.criticalcondition.settings.tablesfor"}} {{localize "CoriolisReloaded.criticalcondition.settings.rendingdamage"}}</h1></p>
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.body"}}</label>
+      <input
+        type="text"
+        name="tableIDRendBody"
+        value="{{tableIDRendBody}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.head"}}</label>
+      <input
+        type="text"
+        name="tableIDRendHead"
+        value="{{tableIDRendHead}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.arms"}}</label>
+      <input
+        type="text"
+        name="tableIDRendArms"
+        value="{{tableIDRendArms}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "CoriolisReloaded.criticalcondition.settings.legs"}}</label>
+      <input
+        type="text"
+        name="tableIDRendLegs"
+        value="{{tableIDRendLegs}}"
+        placeholder="RollTable.[UUID]"
+      />
+    </div>
+  </div>
+
+  <footer class="form-footer">
+    <button type="submit">
+      <i class="fas fa-save"></i> {{localize "CoriolisReloaded.criticalcondition.settings.save"}}
+    </button>
+  </footer>
+</form>
