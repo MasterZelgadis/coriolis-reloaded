@@ -57,5 +57,35 @@
       "grenadeJournal.hint": "UUID of the journal page with the bonus effects for grenades"
     },
     "chatInfo": "Bonus effects for additional successes"
+  },
+  "CoriolisReloaded.replacexpbar.settings": {
+    "enabled.name": "Replace XP-Bar",
+    "enabled.hint": "Replaces the XP-Bar with an input field, to be able to display XP-values >10"
+  },
+  "CoriolisReloaded.criticalcondition": {
+    "settings": {
+      "submodulename": "Critical Condition",
+      "settings": "Settings",
+      "submodulehint": "Alternative rules for critical hits",
+      "save": "Save",
+      "general": "General Settings",
+      "enabled.name": "Critical Condition addon active",
+      "enabled.hint": "Enables the critical hits with hit zones and damage type depending critical hits",
+      "tablesfor": "Tables for",
+      "explosiondamage": "Explosion Damage",
+      "impactdamage": "Impact Damage",
+      "thermaldamage": "Thermal Damage",
+      "rendingdamage": "Rending Damage",
+      "hitzone": "Hit Zone",
+      "body": "Body",
+      "head": "Head",
+      "arms": "Arms",
+      "legs": "Legs",
+      "hitzoneselect": "Select Hit Zone",
+      "damagekeywords": "Damage Types",
+      "keywordhint": "Enter the damage type keywords to use on the weapn sheet"
+    },
+    "rollcritical": "Critical Hit",
+    "selectdamage": "Select damage"
   }
 }

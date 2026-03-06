@@ -57,5 +57,35 @@
       "grenadeJournal.hint": "UUID des Journals für die Zusatzeffekte für Granaten"
     },
     "chatInfo": "Bonuseffekte für zusätzliche Erfolge"
+  },
+  "CoriolisReloaded.replacexpbar.settings": {
+    "enabled.name": "Ersetze Erfahrungsbalken",
+    "enabled.hint": "Ersetzt den Erfahrungsbalken durch ein Eingabefeld, um Werte >10 abbilden zu können"
+  },
+  "CoriolisReloaded.criticalcondition": {
+    "settings": {
+      "submodulename": "Critical Condition",
+      "settings": "Einstellungen",
+      "submodulehint": "Alternative Regeln für kritische Treffer",
+      "save": "Speichern",
+      "general": "Allgemeine Einstellungen",
+      "enabled.name": "Critical Condition Addon aktiv",
+      "enabled.hint": "Aktiviert das Critical Condition Zusatzmodul für Trefferzonen und Schadenstypabhängige kritische Treffer",
+      "tablesfor": "Tabellen für",
+      "explosiondamage": "Explosionsschaden",
+      "impactdamage": "Einschlagschaden",
+      "thermaldamage": "Thermalschaden",
+      "rendingdamage": "Schnittschaden",
+      "hitzone": "Trefferzone",
+      "body": "Körper",
+      "head": "Kopf",
+      "arms": "Arme",
+      "legs": "Beine",
+      "hitzoneselect": "Trefferzone auswählen",
+      "damagekeywords": "Schadensarten",
+      "keywordhint": "Hier die Schlüsselwörter für die Schadensarten auf dem Waffen-Bogen eintragen"
+    },
+    "rollcritical": "Kritischer Treffer",
+    "selectdamage": "Schadenspunkte wählen"
   }
 }
