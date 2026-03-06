@@ -11,7 +11,19 @@ Here you can find information about how to configure all the features of this mo
 The main job of this modula is to implement the alternative combat system from [Coriolis Reloaded - The Combat Overhaul](https://www.drivethrurpg.com/de/product/376483/coriolis-reloaded-the-combat-overhaul). A very cool set of rule changes to make combat a lot more interesting.
 Credits go to [Johan Markström](https://www.drivethrurpg.com/de/browse?author=%22Johan%20Markstr%C3%B6m%22), [Jakob Skatulla](https://www.drivethrurpg.com/de/browse?author=%22Jakob%20Skatulla%22) and [Trevor Marshall](https://www.drivethrurpg.com/de/browse?author=%22Trevor%20Marshall%22) for writing this gread addon. This module though is not connected to them, so if there are any questions or issues regarding the FoundryVTT integration, don't bother them, create an issue here in this repository.
 
-# CriticalCondition
+# Critical Condition
 
 I also implemented a second great ruleset, that alters the critical hit effects to account for different damage effects and different hit zones. You can find the rules here: [Critical Condition](https://www.drivethrurpg.com/de/product/501751/critical-condition).
 Big credits to [Jhekarn Hasamura](https://www.drivethrurpg.com/de/browse?author=%22Jhekarn%20Hasamura%22). Same as above, he wrote the pdf and he is not associated with this module, so if you have questions or issues with this FoundryVTT module, contact me here.
+
+# How To Use
+
+Please visit the wiki pages of this repository for detailed information about how to configure and use this module
+
+# Requirements
+This module is written and tested on FoundryVTT version 13.
+You need to use the yzecoriolis game system in your world.
+
+# Incompatibilities
+Nothing that I'm aware of. Maybe anything that alters the height of the craracter sheet window. 
+If you encounter anything, feel free to create an issue or PR.
