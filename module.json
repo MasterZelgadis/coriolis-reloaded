@@ -3,7 +3,7 @@
     "name": "coriolis-reloaded",
     "title": "Coriolis Reloaded: Combat Overhaul",
     "description": "Adds the Coriolis Reloaded: Combat Overhaul mechanics and some QOL things to the Coriolis system",
-    "version": "v1.2.0",
+    "version": "v1.3.1",
     "authors": [
         {
             "name": "Stefan Guder"
@@ -33,7 +33,7 @@
     ],
     "compatibility": {
         "minimum": "13",
-        "verified": "13.350"
+        "verified": "13.351"
     },
     "systems": [
         "yze-coriolis"
