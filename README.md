@@ -18,7 +18,7 @@ Big credits to [Jhekarn Hasamura](https://www.drivethrurpg.com/de/browse?author=
 
 # How To Use
 
-Please visit the wiki pages of this repository for detailed information about how to configure and use this module
+Please visit the [wiki pages](https://github.com/MasterZelgadis/coriolis-reloaded/wiki) of this repository for detailed information about how to configure and use this module
 
 # Requirements
 This module is written and tested on FoundryVTT version 13.
